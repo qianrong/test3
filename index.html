@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+	class Point {
+		constructor(x,y){
+			this.x = x;
+			this.y = y;
+		}
+		toString(){
+			return '(' + this.x + ',' + this.y + ')';
+		}
+	}
+	var p = new Point(1,2);
+	console.log(p.toString())
+	//class的静态方法 加上static关键字，就表示该方法不会被实例继承
+	class Foo{
+		static classMethods(){
+			return 'hello';
+		}
+	}
+	console.log(Foo.classMethods());
+	var obj = new Foo();
+	//console.log(obj.classMethods())
+
+	class Bar extends Foo{}
+	console.log(Bar.classMethods())
+
+	var tmp = new Date();
+
+	function f(){
+		console.log(tmp);
+		if (true) {
+			var tmp = "hello world";
+		};
+	}
+	f();
+</script>
+</html>
